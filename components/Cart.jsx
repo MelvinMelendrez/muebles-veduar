@@ -8,9 +8,17 @@ import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
 import getStripe from '../lib/getStripe';
 
+import { useRouter } from 'next/router';
+
+
 const Cart = () => {
+  const router = useRouter();
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+
+  const handlePayClick = () => {
+    router.push('/success');
+  };
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -98,7 +106,7 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={handleCheckout}>
+              <button type="button" className="btn" onClick={handlePayClick}>
                 Pagar con stripe
               </button>
             </div>
