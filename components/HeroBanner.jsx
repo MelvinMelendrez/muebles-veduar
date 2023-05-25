@@ -7,18 +7,18 @@ const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="hero-banner-container">
       <div>
-        <p className="beats-solo">{heroBanner.smallText}</p>
-        <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
+        <p className="beats-solo">audifonos beat veduar</p>
+        <h3>audifonos en muebles veduar</h3>
+        <h1>35 horas</h1>
         <img src={urlFor(heroBanner.image)} alt="headphones" className="hero-banner-image" />
 
         <div>
           <Link href={`/product/${heroBanner.product}`}>
-            <button type="button">{heroBanner.buttonText}</button>
+            <button type="button">compra ahora</button>
           </Link>
           <div className="desc">
-            <h5>Description</h5>
-            <p>{heroBanner.desc}</p>
+            <h5>descripcion</h5>
+            <p>audifonos negros marca vedrums</p>
           </div>
         </div>
       </div>
