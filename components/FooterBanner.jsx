@@ -15,7 +15,7 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
         </div>
         <div className="right">
           <p>{smallText}</p>
-          <h3>venta de verano</h3>
+          <h3>ofertas</h3>
           <p>Los mejores audifonos del mercado</p>
           <Link href={`/product/${product}`}>
             <button type="button">compralos!!</button>
