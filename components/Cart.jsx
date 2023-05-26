@@ -18,6 +18,8 @@ const Cart = () => {
 
   const handlePayClick = () => {
     router.push('/success');
+    setShowCart(false);
+
   };
 
   const handleCheckout = async () => {
